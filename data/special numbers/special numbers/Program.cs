@@ -11,8 +11,8 @@ class Program
             int num = i;
             while (num > 0)
             {
-                num = i % 10;
-                sum += num;
+                
+                sum += num % 10;
 
                 num /= 10;
             }
