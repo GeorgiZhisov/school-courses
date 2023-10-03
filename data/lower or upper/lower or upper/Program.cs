@@ -9,11 +9,11 @@ class Program
         char input = Console.ReadLine()[0]; 
         if (char.IsUpper(input))
         {
-            Console.WriteLine($"upper-case.");
+            Console.WriteLine($"upper-case");
         }
         else if (char.IsLower(input))
         {
-            Console.WriteLine($"lower-case.");
+            Console.WriteLine($"lower-case");
         }
 
     }
