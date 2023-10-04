@@ -3,7 +3,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        string[] input = Console.ReadLine()
+            .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+            .ToArray();
+
+
+        Console.WriteLine(string.Join(" ", input.Reverse()));
     }
+
 }
 
