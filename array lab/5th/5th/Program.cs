@@ -3,7 +3,24 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        int[] number = Console.ReadLine()
+            .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToArray();
+
+        int sum = 0;
+
+        for(int i = 0; i < number.Length; i++)
+        {
+
+            if (number[i] % 2 == 0)
+            {
+                sum += number[i];
+            }
+
+        }
+
+        Console.WriteLine(sum);
     }
 }
 
