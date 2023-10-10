@@ -13,7 +13,7 @@ class Program
             sum += arr[i];
         }
 
-        Console.Write(string.Join(" ", arr));
+        Console.WriteLine(string.Join(" ", arr));
         Console.WriteLine(sum);
     }
 }
