@@ -5,6 +5,11 @@ VisualStudioVersion = 25.0.1705.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hangman", "hangman\hangman.csproj", "{87A9E58F-281C-4ED5-BB3C-BE4A91032B36}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1425DF4D-9374-4656-AB3B-D9F391903F37}"
+	ProjectSection(SolutionItems) = preProject
+		words.txt = words.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
