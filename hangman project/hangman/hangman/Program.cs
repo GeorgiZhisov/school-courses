@@ -8,7 +8,11 @@ class Program
 
         const char Underscore = '_';
 
+<<<<<<< HEAD
         const string winAnimation = @"
+=======
+		const string winAnimation = @"
+>>>>>>> ff77683d0e32af7c74255576e86826b665423bcb
                                             ┌───────────────────────────┐
                                             │                           │
                                             │ WW       WW  **  NN   N   │
@@ -22,7 +26,11 @@ class Program
                                             └───────────────────────────┘
                                             ";
 
+<<<<<<< HEAD
         const string loseAnimation = @"
+=======
+		const string loseAnimation = @"
+>>>>>>> ff77683d0e32af7c74255576e86826b665423bcb
                                             ┌────────────────────────────────────┐
                                             │  LLL          OOOO    SSSS   SSSS  │
                                             │  LLL         OO  OO  SS  SS SS  SS │
@@ -37,6 +45,7 @@ class Program
                                             └────────────────────────────────────┘
                                             ";
 
+<<<<<<< HEAD
         const int maxIncorrectGuesses = 6;
 
         string[] wrongGuessesFrames =
@@ -391,6 +400,362 @@ class Program
 
             };
         string[] words = ReadWordsFromFile();
+=======
+		const int maxIncorrectGuesses = 6;
+
+		string[] wrongGuessesFrames =
+		{
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"     ███  ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"     ███  ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"     ███  ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      |\  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"     ███  ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"     ███  ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"       \  ║   " + '\n' +
+				@"     ███  ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"     / \  ║   " + '\n' +
+				@"     ███  ║   " + '\n' +
+				@"    ══════╩═══"
+
+			};
+
+		string[] deathAnimationFrames =
+		{
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"     / \  ║   " + '\n' +
+				@"     ███  ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"     / \  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o>  ║   " + '\n' +
+				@"     /|   ║   " + '\n' +
+				@"      >\  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"     / \  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"     <o   ║   " + '\n' +
+				@"      |\  ║   " + '\n' +
+				@"     /<   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"     / \  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o>  ║   " + '\n' +
+				@"     /|   ║   " + '\n' +
+				@"      >\  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o>  ║   " + '\n' +
+				@"     /|   ║   " + '\n' +
+				@"      >\  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"     / \  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"     <o   ║   " + '\n' +
+				@"      |\  ║   " + '\n' +
+				@"     /<   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"     <o   ║   " + '\n' +
+				@"      |\  ║   " + '\n' +
+				@"     /<   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"     <o   ║   " + '\n' +
+				@"      |\  ║   " + '\n' +
+				@"     /<   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"     /|\  ║   " + '\n' +
+				@"     / \  ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      o   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      /   ║   " + '\n' +
+				@"      \   ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    |__   ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      .   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    \__   ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@"   ____   ║   " + '\n' +
+				@"    ══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@"      .   ║   " + '\n' +
+				@"    __    ║   " + '\n' +
+				@"   /══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      .   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"    _ '   ║   " + '\n' +
+				@"  _/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@"      _   ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@"      .   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      .   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@"      _   ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@"      .   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"      .   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@"      _   ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      .   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      '   ║   " + '\n' +
+				@" __/══════╩═══",
+
+				@"      ╔═══╗   " + '\n' +
+				@"      |   ║   " + '\n' +
+				@"      O   ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"          ║   " + '\n' +
+				@"      _   ║   " + '\n' +
+				@" __/══════╩═══"
+
+			};
+		string[] words = ReadWordsFromFile();
+>>>>>>> ff77683d0e32af7c74255576e86826b665423bcb
 
         Console.CursorVisible = false;
 
@@ -405,6 +770,7 @@ class Program
 
             List<char> playerUsedLetters = new List<char>();
 
+<<<<<<< HEAD
             DrawCurrentGameState(false, incorrectGuessCount, wordToGuess, playerUsedLetters);
 
             PlayGame(word, wordToGuess, incorrectGuessCount, playerUsedLetters);
@@ -420,9 +786,26 @@ class Program
             }
 
             Console.Clear();
+=======
+			DrawCurrentGameState(false, incorrectGuessCount, wordToGuess, playerUsedLetters);
+
+			PlayGame(word, wordToGuess, incorrectGuessCount, playerUsedLetters);
+
+			Console.Write("If you want to play again press [Enter]. Else type 'quit':");
+			string decision = Console.ReadLine();
+
+			if (decision == "quit")
+			{
+				Console.Clear();
+				Console.WriteLine("Thank you for playing! Hangman was closed.");
+				return;
+			}
+
+			Console.Clear();
+>>>>>>> ff77683d0e32af7c74255576e86826b665423bcb
 
 
-        }
+		}
 
         static string[] ReadWordsFromFile()
         {
@@ -445,48 +828,152 @@ class Program
 
         }
 
+<<<<<<< HEAD
         bool CheckIfSymbolsIsContained(string words, char playerLetter)
         {
             if (!words.Contains(playerLetter))
             {
                 return false;
             }
+=======
+		bool CheckIfSymbolsIsContained(string words, char playerLetter)
+		{
+			if (!words.Contains(playerLetter))
+			{
+				return false;
+			}
 
-            return true;
-        }
-
-
-
-        string AddLetterToGuessWord(string words, char playerLetter, string wordToGuess)
-        {
-
-            char[] wordToGuessCharArr = wordToGuess.ToCharArray();
-
-            for (int i = 0; i < wordToGuess.Length; i++)
-            {
-                if (playerLetter == words[i])
-                {
-                    wordToGuessCharArr[i] = playerLetter;
-                }
-
-            }
-            return new String(wordToGuessCharArr);
-        }
+			return true;
+		}
 
 
 
-        bool CheckIfPlayerWins(string wordToGuess)
-        {
-            const char Underscore = '_';
-            if (wordToGuess.Contains(Underscore))
-            {
-                return false;
-            }
-            return true;
-        }
+		string AddLetterToGuessWord(string words, char playerLetter, string wordToGuess)
+		{
+
+			char[] wordToGuessCharArr = wordToGuess.ToCharArray();
+
+			for (int i = 0; i < wordToGuess.Length; i++)
+			{
+				if (playerLetter == words[i])
+				{
+					wordToGuessCharArr[i] = playerLetter;
+				}
+
+			}
+			return new String(wordToGuessCharArr);
+		}
 
 
 
+		bool CheckIfPlayerWins(string wordToGuess)
+		{
+			const char Underscore = '_';
+			if (wordToGuess.Contains(Underscore))
+			{
+				return false;
+			}
+			return true;
+		}
+
+
+
+		bool CheckIfPlayerLosses(int inccorectGuessCount)
+		{
+			const int MaxAllowedInccorectCharacters = 6;
+			if (inccorectGuessCount == MaxAllowedInccorectCharacters)
+			{
+				return true;
+			}
+
+			return false;
+
+		}
+
+
+
+		string GetRandomWord(string[] words)
+		{
+			Random random = new Random();
+			string word = words[random.Next(words.Length)];
+			return word.ToLower();
+
+
+		}
+
+		void DrawDeathAnimation(string[] deathAnimation)
+		{
+			for (int i = 0; i < deathAnimation.Length; i++)
+			{
+				Console.WriteLine(deathAnimation[i]);
+				Thread.Sleep(200);
+				Console.SetCursorPosition(0, 0);
+			}
+		}
+
+
+		void DrawCurrentGameState(bool inputIsInvalid, int incorrectGuessCount,
+				string wordToGuess, List<char> playerUsedLetters)
+		{
+			Console.Clear();
+			Console.WriteLine(wrongGuessesFrames[incorrectGuessCount]);
+>>>>>>> ff77683d0e32af7c74255576e86826b665423bcb
+
+			Console.WriteLine($"Guess: {wordToGuess}");
+			Console.WriteLine($"You have to guess {wordToGuess.Length} symbols");
+			Console.WriteLine($"The following letters are used: {string.Join(", ", playerUsedLetters)}");
+
+			if (inputIsInvalid)
+			{
+				Console.WriteLine("You should type only a single character!");
+			}
+
+			Console.Write("Your symbol: ");
+		}
+
+		void PlayGame(string word, string wordToGuess,
+					int incorrectGuessCount, List<char> playerUsedLetters)
+		{
+			while (true)
+			{
+				string playerInput = Console.ReadLine().ToLower();
+
+				if (playerInput.Length != 1)
+				{
+					DrawCurrentGameState(true, incorrectGuessCount, wordToGuess, playerUsedLetters);
+					continue;
+				}
+
+				char playerLetter = char.Parse(playerInput);
+				playerUsedLetters.Add(playerLetter);
+
+				bool playerLetterIsContained = CheckIfSymbolsIsContained(word, playerLetter);
+
+				if (playerLetterIsContained)
+				{
+					wordToGuess = AddLetterToGuessWord(word, playerLetter, wordToGuess);
+				}
+				else
+				{
+					incorrectGuessCount++;
+				}
+
+				DrawCurrentGameState(false, incorrectGuessCount, wordToGuess, playerUsedLetters);
+
+				bool playerWins = CheckIfPlayerWins(wordToGuess);
+
+				if (playerWins)
+				{
+					Console.Clear();
+					Console.WriteLine(winAnimation);
+					Console.WriteLine($"The word you guessed is [{word}].");
+
+					break;
+				}
+
+				bool playerLosses = CheckIfPlayerLosses(incorrectGuessCount);
+
+<<<<<<< HEAD
         bool CheckIfPlayerLosses(int inccorectGuessCount)
         {
             const int MaxAllowedInccorectCharacters = 6;
@@ -494,9 +981,18 @@ class Program
             {
                 return true;
             }
+=======
+				if (playerLosses)
+				{
+					Console.SetCursorPosition(0, 0);
+					DrawDeathAnimation(deathAnimationFrames);
+>>>>>>> ff77683d0e32af7c74255576e86826b665423bcb
 
-            return false;
+					Console.Clear();
+					Console.WriteLine(loseAnimation);
+					Console.WriteLine($"The exact word is [{word}].");
 
+<<<<<<< HEAD
         }
 
 
@@ -596,3 +1092,12 @@ class Program
         }
     }
 }
+=======
+					break;
+				}
+			}
+		}
+    }    
+}
+
+>>>>>>> ff77683d0e32af7c74255576e86826b665423bcb
