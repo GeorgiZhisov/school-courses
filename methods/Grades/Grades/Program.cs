@@ -1,41 +1,40 @@
-﻿namespace nothing_in_common;
+﻿namespace Grades;
 class Program
 {
     static void Main(string[] args)
     {
         double grade = double.Parse(Console.ReadLine());
-        PrintInWords(grade);
 
+        PrintInWords(grade);
     }
-    static void PrintInWords(double grade)
+        
+   static void PrintInWords(double grades)
     {
         string gradeInWords = string.Empty;
-        if (grade >= 2 && grade <= 2.99)
+
+        if(grades >= 2 && grades <= 2.99)
         {
             gradeInWords = "Fail";
 
-        }
-        if (grade >= 3 && grade <= 3.49)
+        }else if (grades >= 3 && grades<= 3.49)
         {
             gradeInWords = "Poor";
 
-        }
-        if (grade >= 3.50 && grade <= 4.49)
+        }else if (grades >= 3.50 && grades <= 4.49)
         {
             gradeInWords = "Good";
 
-        }
-        if (grade >= 4.50 && grade <= 5.49)
+        }else if (grades >= 4.50 && grades <= 5.49)
         {
             gradeInWords = "Very good";
 
-        }
-        if (grade >= 5.50 && grade <= 6)
+        }else if(grades >= 5.50 && grades == 6)
         {
             gradeInWords = "Excellent";
-
         }
+
         Console.WriteLine(gradeInWords);
+
     }
 }
 
