@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "factorial division", "factorial division\factorial division.csproj", "{DB5156EB-B977-4735-8C1E-8E19F9B5DB49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB5156EB-B977-4735-8C1E-8E19F9B5DB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5156EB-B977-4735-8C1E-8E19F9B5DB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5156EB-B977-4735-8C1E-8E19F9B5DB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5156EB-B977-4735-8C1E-8E19F9B5DB49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59624256-FA05-4D12-BA07-B7C42C699FFF}
+	EndGlobalSection
+EndGlobal
