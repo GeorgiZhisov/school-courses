@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "change list", "change list\change list.csproj", "{6B915A56-7AAD-43EE-BEE7-9F1BC8C31F1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B915A56-7AAD-43EE-BEE7-9F1BC8C31F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B915A56-7AAD-43EE-BEE7-9F1BC8C31F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B915A56-7AAD-43EE-BEE7-9F1BC8C31F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B915A56-7AAD-43EE-BEE7-9F1BC8C31F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA3E3863-5FB1-47FD-902F-887C2BA0C3BD}
+	EndGlobalSection
+EndGlobal
