@@ -55,10 +55,10 @@ class Program
             pool.Enqueue(firstPlayerCard);
             pool.Enqueue(secondPlayerCard);
 
-           // ProccesWar(pool);
+            ProccesWar(pool);
 
 
-          //  DetermineRoundWinner(pool);
+           DetermineRoundWinner(pool);
 
             Console.WriteLine("================================================================================");
             Console.WriteLine($"First player currently has {firsPlayerDeck.Count} cards.");
@@ -156,6 +156,81 @@ class Program
 
             secondPlayerCard = secondPlayerDeck.Dequeue();
             Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
+        }
+
+
+        void ProccesWar(Queue<Card> pool)
+        {
+            while ((int)firstPlayerCard.Face == (int)secondPlayerCard.Face)
+            {
+                Console.WriteLine("WAR !");
+
+
+                if (firsPlayerDeck.Count < 4)
+                {
+                    AddCardsToWinner(firsPlayerDeck, secondPlayerDeck);
+                    Console.WriteLine($"First player does not have enough cards to conitnue playing...");
+                    break;
+
+                }
+                if (secondPlayerDeck.Count < 4)
+                {
+                    AddCardsToWinner(secondPlayerDeck, firsPlayerDeck);
+                    Console.WriteLine($"Second player does not have enough cards to continue playing...");
+                    break;
+                }
+            }
+
+            AddWarCardsToPool(pool);
+
+            firstPlayerCard = firsPlayerDeck.Dequeue();
+            Console.WriteLine($"First player has drawn: {firstPlayerCard}");
+
+            secondPlayerCard = secondPlayerDeck.Dequeue();
+            Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
+
+            pool.Enqueue(firstPlayerCard);
+            pool.Enqueue(secondPlayerCard);
+        }
+        void AddCardsToWinner(Queue<Card> loserDeck, Queue<Card> winnerDeck)
+        {
+            while (loserDeck.Count > 0)
+            {
+                winnerDeck.Enqueue(loserDeck.Dequeue());
+            }
+        }
+
+        void AddWarCardsToPool(Queue<Card> pool)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                pool.Enqueue(firsPlayerDeck.Dequeue());
+                pool.Enqueue(secondPlayerDeck.Dequeue());
+            }
+        }
+
+        void DetermineRoundWinner (Queue<Card> pool)
+        {
+            if ((int)firstPlayerCard.Face > (int)secondPlayerCard.Face)
+            {
+                Console.WriteLine("The first player has won the card!");
+                foreach (var card in pool)
+                {
+                    firsPlayerDeck.Enqueue(card);
+                }
+            }
+            else
+            {
+                Console.WriteLine("The second player has won the card!");
+                foreach (var card in pool)
+                {
+                    secondPlayerDeck.Enqueue(card);
+                }
+            }
+
+
+
+            
         }
     }
 
