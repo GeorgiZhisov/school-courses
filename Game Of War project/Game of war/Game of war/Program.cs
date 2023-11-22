@@ -156,44 +156,42 @@ internal class Program
            
         }
 
-
         void ProccesWar(Queue<Card> pool)
         {
             while ((int)firstPlayerCard.Face == (int)secondPlayerCard.Face)
             {
                 Console.WriteLine("WAR!");
 
-         
-
                 if (firsPlayerDeck.Count < 4)
                 {
                     AddCardsToWinner(firsPlayerDeck, secondPlayerDeck);
-                    Console.WriteLine($"First player does not have enough cards to conitnue playing...");
-                  //  break;
-
+                    Console.WriteLine($"First player does not have enough cards to continue playing...");
+                    break;
                 }
                 if (secondPlayerDeck.Count < 4)
                 {
                     AddCardsToWinner(secondPlayerDeck, firsPlayerDeck);
                     Console.WriteLine($"Second player does not have enough cards to continue playing...");
-                    
+                    break;
                 }
 
-      
-            
+                AddWarCardsToPool(pool);
+
+                for (int i = 0; i < 4; i++)
+                {
+
+                    firstPlayerCard = firsPlayerDeck.Dequeue();
+                   Console.WriteLine($"First player has drawn: {firstPlayerCard}");
+
+                    secondPlayerCard = secondPlayerDeck.Dequeue();
+                    Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
+
+                    pool.Enqueue(firstPlayerCard);
+                    pool.Enqueue(secondPlayerCard);
+                }
             }
-
-            AddWarCardsToPool(pool);
-
-            firstPlayerCard = firsPlayerDeck.Dequeue();
-            //Console.WriteLine($"First player has drawn: {firstPlayerCard}");
-
-            secondPlayerCard = secondPlayerDeck.Dequeue();
-           // Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
-
-            pool.Enqueue(firstPlayerCard);
-            pool.Enqueue(secondPlayerCard);
         }
+
         void AddCardsToWinner(Queue<Card> loserDeck, Queue<Card> winnerDeck)
         {
             while (loserDeck.Count > 0)
