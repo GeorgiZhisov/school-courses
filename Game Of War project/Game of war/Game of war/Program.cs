@@ -181,10 +181,10 @@ internal class Program
                 {
 
                     firstPlayerCard = firsPlayerDeck.Dequeue();
-                   Console.WriteLine($"First player has drawn: {firstPlayerCard}");
+                   //Console.WriteLine($"First player has drawn: {firstPlayerCard}");
 
                     secondPlayerCard = secondPlayerDeck.Dequeue();
-                    Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
+                    //Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
 
                     pool.Enqueue(firstPlayerCard);
                     pool.Enqueue(secondPlayerCard);
