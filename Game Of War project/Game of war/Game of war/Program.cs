@@ -92,9 +92,6 @@ internal class Program
 
                 }
 
-
-                
-
             }
 
             return newsDeck;
@@ -165,14 +162,14 @@ internal class Program
             while ((int)firstPlayerCard.Face == (int)secondPlayerCard.Face)
             {
                 Console.WriteLine("WAR!");
-                
 
+         
 
                 if (firsPlayerDeck.Count < 4)
                 {
                     AddCardsToWinner(firsPlayerDeck, secondPlayerDeck);
                     Console.WriteLine($"First player does not have enough cards to conitnue playing...");
-                    break;
+                  //  break;
 
                 }
                 if (secondPlayerDeck.Count < 4)
@@ -181,16 +178,18 @@ internal class Program
                     Console.WriteLine($"Second player does not have enough cards to continue playing...");
                     
                 }
+
+      
             
             }
 
             AddWarCardsToPool(pool);
 
             firstPlayerCard = firsPlayerDeck.Dequeue();
-            Console.WriteLine($"First player has drawn: {firstPlayerCard}");
+            //Console.WriteLine($"First player has drawn: {firstPlayerCard}");
 
             secondPlayerCard = secondPlayerDeck.Dequeue();
-            Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
+           // Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
 
             pool.Enqueue(firstPlayerCard);
             pool.Enqueue(secondPlayerCard);
