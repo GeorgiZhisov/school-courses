@@ -6,7 +6,7 @@ namespace Game_of_war
 		Spade = '♠',
 		Club = '♣',
 		Heart = '♥',
-		Diamond = '♦',
+		Diamond = '♦'
 
     }
 }

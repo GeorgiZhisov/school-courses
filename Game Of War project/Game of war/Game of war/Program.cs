@@ -1,7 +1,8 @@
 ﻿using System.Text;
 
 namespace Game_of_war;
-class Program
+
+internal class Program
 {
     static void Main(string[] args)
     {
@@ -71,7 +72,7 @@ class Program
 
         List<Card> GenerateDeck()
         {
-            List<Card> deck = new List<Card>();
+            List<Card> newsDeck = new List<Card>();
 
             CardFace[] faces = (CardFace[])Enum.GetValues(typeof(CardFace));
             CardSuit[] suits= (CardSuit[])Enum.GetValues(typeof(CardSuit));
@@ -83,33 +84,33 @@ class Program
                     CardFace currentFace = faces[face];
                     CardSuit currentSuit = suits[suite];
 
-                       deck.Add(new Card
+                       newsDeck.Add(new Card
                      {
                      Face = currentFace,
-                    Suit = currentSuit
+                    Suite = currentSuit
                     });
 
                 }
 
-               
 
+                
 
             }
 
-            return deck;
+            return newsDeck;
         }
 
-        void ShuffleDeck(List<Card> deck)
+        void ShuffleDeck(List<Card> newDeck)
         {
             Random random = new Random();
 
 
-            for(int i = 0; i < deck.Count; i++)
+            for(int i = 0; i < newDeck.Count; i++)
             {
-                int firstCardIndex = random.Next(deck.Count);
+                int firstCardIndex = random.Next(newDeck.Count);
                 Card tempCard = deck[firstCardIndex];
-                deck[firstCardIndex] = deck[i];
-                deck[i] = tempCard;
+                newDeck[firstCardIndex] = newDeck[i];
+                newDeck[i] = tempCard;
             }
         }
 
@@ -120,10 +121,9 @@ class Program
                 Card[] firstTwoDrawnCards = deck.Take(2).ToArray();
                 deck.RemoveRange(0, 2);
 
-                firsPlayerDeck.Enqueue(firstTwoDrawnCards[0]);
+               firsPlayerDeck.Enqueue(firstTwoDrawnCards[0]);
                 secondPlayerDeck.Enqueue(firstTwoDrawnCards[1]);
 
-               
 
 
             }
@@ -150,12 +150,13 @@ class Program
 
         void DrawPlayersCards()
         {
-            firstPlayerCard = firsPlayerDeck.Peek();
+            firstPlayerCard = firsPlayerDeck.Dequeue();
             Console.WriteLine($"First player has drawn: {firstPlayerCard}");
-            firsPlayerDeck.Dequeue();
+          
 
             secondPlayerCard = secondPlayerDeck.Dequeue();
             Console.WriteLine($"Second player has drawn: {secondPlayerCard}");
+           
         }
 
 
@@ -163,7 +164,8 @@ class Program
         {
             while ((int)firstPlayerCard.Face == (int)secondPlayerCard.Face)
             {
-                Console.WriteLine("WAR !");
+                Console.WriteLine("WAR!");
+                
 
 
                 if (firsPlayerDeck.Count < 4)
@@ -177,8 +179,9 @@ class Program
                 {
                     AddCardsToWinner(secondPlayerDeck, firsPlayerDeck);
                     Console.WriteLine($"Second player does not have enough cards to continue playing...");
-                    break;
+                    
                 }
+            
             }
 
             AddWarCardsToPool(pool);
