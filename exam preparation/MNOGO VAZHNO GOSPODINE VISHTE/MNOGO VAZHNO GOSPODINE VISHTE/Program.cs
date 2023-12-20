@@ -1,0 +1,1 @@
+﻿Gospodine nqkoi ot zadachite ne sa verni zashtoto ne mozhah da gi resha
