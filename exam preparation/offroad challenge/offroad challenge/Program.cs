@@ -7,29 +7,44 @@
         int[] neededFuel = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
         int altitudesCount = initialFuel.Length;
+        int reachedAltitudes = 0;
 
-        for (int altitude = 0; altitude < altitudesCount; altitude++)
+        for (int altitude = 1; altitude <= altitudesCount; altitude++)
         {
-            int currentFuel = initialFuel[altitudesCount - 1];
-            int consumptionIndex = consumptionIndexes[0];
+            int currentFuel = initialFuel[altitudesCount - altitude];
+            int consumptionIndex = consumptionIndexes[altitude - 1];
 
             int remainingFuel = currentFuel - consumptionIndex;
 
-            if (remainingFuel >= neededFuel[altitude])
+            if (remainingFuel >= neededFuel[0])
             {
-                Console.WriteLine($"John has reached: Altitude {altitude + 1}");
-                initialFuel = initialFuel.Take(altitudesCount - 1).ToArray();
-                consumptionIndexes = consumptionIndexes.Skip(1).ToArray();
+                Console.WriteLine($"John has reached: Altitude {altitude}");
+                reachedAltitudes = altitude;
             }
             else
             {
-                Console.WriteLine($"John did not reach: Altitude {altitude + 1}");
-                Console.WriteLine("John failed to reach the top.");
-                Console.WriteLine($"Reached altitudes: {string.Join(", ", Enumerable.Range(1, altitude))}");
+                Console.WriteLine($"John did not reach: Altitude {altitude}");
+
+                if (reachedAltitudes > 0)
+                {
+                    Console.WriteLine("John failed to reach the top.");
+                    Console.WriteLine($"Reached altitudes: Altitude {string.Join(", ", Enumerable.Range(1, reachedAltitudes))}");
+                }
+                else
+                {
+                    Console.WriteLine("John failed to reach the top.");
+                    Console.WriteLine("John didn't reach any altitude.");
+                }
+
                 return;
             }
-        }
 
-        Console.WriteLine("John has reached all the altitudes and managed to reach the top!");
+            neededFuel = neededFuel.Skip(1).ToArray();
+
+            if (altitude == altitudesCount)
+            {
+                Console.WriteLine("John has reached all the altitudes and managed to reach the top!");
+            }
+        }
     }
 }
