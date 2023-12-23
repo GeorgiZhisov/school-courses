@@ -39,7 +39,7 @@ class Program
         if (armorValues.Any())
         {
             Console.WriteLine("The soldier has been defeated.");
-            Console.WriteLine($"Total monsters killed: {killedMonsters - 1}");
+            Console.WriteLine($"Total monsters killed: {killedMonsters - 3}");
         }
         else
         {

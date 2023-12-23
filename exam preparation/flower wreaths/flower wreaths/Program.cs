@@ -21,7 +21,7 @@ class Program
             }
             else if (sum > 15)
             {
-                lilies[lilies.Count - 1] += 2;
+                lilies[lilies.Count - 1] -= 2;
                 roses.RemoveAt(0);
             }
             else
@@ -33,7 +33,7 @@ class Program
 
         int remainingFlowers = lilies.Sum() + roses.Sum();
 
-        if (wreathsCount >= neededWreaths)
+        if (wreathsCount > neededWreaths)
         {
             Console.WriteLine($"You made it, you are going to the competition with {wreathsCount} wreaths!");
         }
