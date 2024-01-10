@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "symbol", "symbol\symbol.csproj", "{AA194CE2-46E2-465C-A42F-4659F0963033}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA194CE2-46E2-465C-A42F-4659F0963033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA194CE2-46E2-465C-A42F-4659F0963033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA194CE2-46E2-465C-A42F-4659F0963033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA194CE2-46E2-465C-A42F-4659F0963033}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09E700BA-DD4B-4FF5-91FB-2E01EA89AC3F}
+	EndGlobalSection
+EndGlobal
