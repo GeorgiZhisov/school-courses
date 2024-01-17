@@ -1,45 +1,34 @@
-﻿namespace agains_bugs;
+﻿using System.Linq;
+
+namespace aaaa;
 class Program
 {
-    static async void Main(string[] args)
+    static void Main(string[] args)
     {
         int n = int.Parse(Console.ReadLine());
+        int[] plants = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-        int[] positions = new int[n];
-        int[] sprays = new int[n];
+        int[] days = new int[plants.Length];
+        Stack<int> proximityStack = new Stack<int>();
+        proximityStack.Push(0);
 
-        string[] input = Console.ReadLine().Split();
-        for(int i = 0; i< n; i++)
+        for (int i = 1; i < plants.Length; i++)
         {
-            positions[i] = int.Parse(input[i]);
-        }
-
-        int days = 2;
-        while (true)
-        {
-            bool plantDied = false;
-            for(int i =1; i<n; i++)
+            int MaxDays = 0;
+            while (proximityStack.Count > 0 && plants[proximityStack.Peek()] >= plants[i])
             {
-                if (sprays[i] > sprays[i - 1])
-                {
-                    sprays[i] = sprays[i - 1];
-                    plantDied = true;
-                }
+                MaxDays = Math.Max(MaxDays, days[proximityStack.Pop()]);
             }
-
-            if (!plantDied)
+            if (proximityStack.Count > 0)
             {
-                break;
+                days[i] = MaxDays + 1;
             }
-
-            days++;
+            proximityStack.Push(i);
 
         }
-
-
-        Console.WriteLine(days);
-
+        Console.WriteLine(days.Max());
 
     }
 }
+
 

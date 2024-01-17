@@ -1,33 +1,40 @@
-﻿namespace cash_desk;
-class Program
+﻿namespace ExamPreparation
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        int[] transactionCount = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-
-        int clientsCount = int.Parse(Console.ReadLine());
-        int transactions = transactionCount[0] + transactionCount[1] + transactionCount[2];
-
-        int time = 0;
-
-        while (true)
+        static void Main(string[] args)
         {
-            clientsCount -= transactions;
-            time++;
+            int[] transactionCount = Console.ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
 
-            if(time % 4 == 0)
+            int clientsCount = int.Parse(Console.ReadLine());
+
+            int time = transactionCount[0] + transactionCount[1] + transactionCount[2];
+
+            int transactions = 0;
+
+            while (true)
             {
-                time++;
+                if (clientsCount <= 0)
+                {
+                    break;
+                }
+
+                clientsCount -= time;
+                transactions++;
+
+                if (transactions % 4 == 0)
+                {
+                    transactions++;
+                }
+
+
             }
 
-            if (clientsCount <= 0)
-            {
-                break;
-            }
+            Console.WriteLine($"Time needed: {transactions}h.");
 
         }
-
-        Console.WriteLine($"Time needed: {time}h.");
     }
 }
-
