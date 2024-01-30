@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "falling rocks", "falling rocks\falling rocks.csproj", "{46C87E3E-C15A-49CC-ADB1-0E0C86BA9D01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46C87E3E-C15A-49CC-ADB1-0E0C86BA9D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C87E3E-C15A-49CC-ADB1-0E0C86BA9D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C87E3E-C15A-49CC-ADB1-0E0C86BA9D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C87E3E-C15A-49CC-ADB1-0E0C86BA9D01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF215D0F-AFF7-42C0-906D-9C01FE558504}
+	EndGlobalSection
+EndGlobal
