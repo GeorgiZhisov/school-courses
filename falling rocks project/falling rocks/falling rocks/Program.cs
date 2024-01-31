@@ -91,6 +91,7 @@ class Program
             Console.SetWindowSize(WindowWidth, WindowHeight);
             Console.SetBufferSize(WindowWidth, WindowHeight);
 
+
         }
 
         void RedrawConsole()
@@ -190,6 +191,8 @@ class Program
             {
                 rocks.Remove(rock);
             }
+
+            
             
         }
 
