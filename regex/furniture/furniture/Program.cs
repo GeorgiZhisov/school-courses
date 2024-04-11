@@ -12,7 +12,7 @@ namespace Furniture
             var items = new List<string>();
             double totalPrice = 0.0;
 
-            while (input != "Purchase")
+            while (input != "Run!")
             {
                 Match m = Regex.Match(input, regex, RegexOptions.IgnoreCase);
                 if (m.Success)
