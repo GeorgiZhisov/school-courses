@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project pong", "project pong\project pong.csproj", "{776BC10B-8CF4-494F-A5F3-CB786C6E84CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{776BC10B-8CF4-494F-A5F3-CB786C6E84CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776BC10B-8CF4-494F-A5F3-CB786C6E84CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776BC10B-8CF4-494F-A5F3-CB786C6E84CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776BC10B-8CF4-494F-A5F3-CB786C6E84CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB9EE270-7366-42FA-B897-FC1C649AD8D3}
+	EndGlobalSection
+EndGlobal
