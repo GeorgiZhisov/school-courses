@@ -155,6 +155,10 @@ public class Racket
 
     public Racket(int x, int y, int lenght = 5, char tile = '|')
     {
+        this._x = this._initialX = x;
+        this._y = y;
+        this._lenght = lenght;
+        this.Tile = tile;
 
     }
     public char Tile { get; set; }
