@@ -127,7 +127,7 @@ public class Field
         return this._field[row, col];
     }
 
-    public void Set(int row, int col , char el)
+    public void Set(int row, int col, char el)
     {
         this._field[row, col] = el;
     }
