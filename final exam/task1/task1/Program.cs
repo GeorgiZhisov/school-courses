@@ -19,7 +19,6 @@ namespace task1
                     case "Space":
                         int index = int.Parse(splitted[1]);
                         message = message.Insert(index, " ");
-                        Console.WriteLine(message);
                         break;
 
                     case "Backward":
@@ -33,7 +32,6 @@ namespace task1
 
                             message = message.Remove(substringIndex, textToMove.Length);
                             message += reversedText;
-                            Console.WriteLine(message);
                         }
                         else
                         {
@@ -45,11 +43,10 @@ namespace task1
                         string target = splitted[1];
                         string replacement = splitted[2];
                         message = message.Replace(target, replacement);
-                        Console.WriteLine(message);
                         break;
                 }
 
-               
+                Console.WriteLine(message);
             }
 
             Console.WriteLine($"You have a secret text message: {message}");
